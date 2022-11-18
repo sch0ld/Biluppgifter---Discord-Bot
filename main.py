@@ -14,7 +14,7 @@ TAG_RE = re.compile(r'<[^>]+>')
 def removeHTML(text):
 	return TAG_RE.sub('', text)
 
-#client = discord.Client()
+# Gets all intents from Discord and applies them to the bot.
 intents = discord.Intents.all()
 client = discord.Client(intents=intents)
 
@@ -72,8 +72,5 @@ async def on_message(message):
     await message.channel.send(GetInfoAbout(regnr))
     message.delete
 
-<<<<<<< HEAD
 client.run("TOKEN")
-=======
-client.run("TOKEN")
->>>>>>> 3b2fad40f2978722120571ba615c119bbd0fe60b
+
