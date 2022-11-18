@@ -9,6 +9,8 @@ Fabrikat = "None"
 
 TAG_RE = re.compile(r'<[^>]+>')
 
+
+# Removes all HTML tags found in RegEx assigned above in the passed parameter and then returns it
 def removeHTML(text):
 	return TAG_RE.sub('', text)
 
@@ -49,9 +51,10 @@ def GetInfoAbout(reg):
 @client.event
 async def on_ready():
   
+  # Prints a ready-message in the console
   print("Bot is ready as {0.user}".format(client))
   
-
+  # Sets the "playing status"
   await client.change_presence(activity=discord.Streaming(name="Biluppgifter", url='https://biluppgifter.se'))
 
 
@@ -61,8 +64,6 @@ async def on_message(message):
   if message.author == client.user:
     return
 
-  print ("Message is:" + message.content)
-
   if message.content == '$help':
     await message.channel.send("> **HELP!**\n> $help - This :P \n> ABC123")
 
@@ -71,4 +72,4 @@ async def on_message(message):
     await message.channel.send(GetInfoAbout(regnr))
     message.delete
 
-client.run("NzkzNDkzNzY1MzEwMTE5OTY5.X-tEqA.RLS9BCrmaKS4cPrhtuVm8MxswFw")
+client.run("TOKEN")
