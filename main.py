@@ -71,4 +71,4 @@ async def on_message(message):
     await message.channel.send(GetInfoAbout(regnr))
     message.delete
 
-client.run("NzkzNDkzNzY1MzEwMTE5OTY5.X-tEqA.RLS9BCrmaKS4cPrhtuVm8MxswFw")
+client.run("TOKEN")
