@@ -72,4 +72,8 @@ async def on_message(message):
     await message.channel.send(GetInfoAbout(regnr))
     message.delete
 
+<<<<<<< HEAD
 client.run("TOKEN")
+=======
+client.run("TOKEN")
+>>>>>>> 3b2fad40f2978722120571ba615c119bbd0fe60b
